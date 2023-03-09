@@ -10,7 +10,8 @@
     "noLib": false, // 不处理类库
     "target": "es6", // 遵循es6版本
     "sourceMap": true,
-    "lib": [ // 编译时用的库
+    "lib": [
+      // 编译时用的库
       "ESNext",
       "DOM"
     ],
@@ -21,9 +22,10 @@
     "strict": true, // 是否启动严格模式
     "skipLibCheck": true // 跳过类库检测
   },
-  "exclude": [ // 排除掉哪些类库
+  "exclude": [
+    // 排除掉哪些类库
     "node_modules",
-    "**/__tests__",
+    // "**/__tests__",
     "dist/**"
   ]
 }
