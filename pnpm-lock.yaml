@@ -24,11 +24,13 @@ importers:
       '@vue/test-utils': ^2.3.0
       '@x-plus/components': workspace:*
       '@x-plus/hooks': workspace:*
+      '@x-plus/locale': workspace:^0.0.1
       '@x-plus/theme-chalk': workspace:*
       '@x-plus/utils': workspace:*
       esbuild: ^0.17.11
       eslint: ^8.35.0
       eslint-plugin-vue: ^9.9.0
+      fast-glob: ^3.2.12
       gulp: ^4.0.2
       gulp-autoprefixer: ^8.0.0
       gulp-clean-css: ^4.3.0
@@ -47,6 +49,7 @@ importers:
     dependencies:
       '@x-plus/components': link:packages/components
       '@x-plus/hooks': link:packages/hooks
+      '@x-plus/locale': link:packages/locale
       '@x-plus/theme-chalk': link:packages/theme-chalk
       '@x-plus/utils': link:packages/utils
       typescript: 4.9.5
@@ -73,6 +76,7 @@ importers:
       esbuild: 0.17.11
       eslint: 8.35.0
       eslint-plugin-vue: 9.9.0_eslint@8.35.0
+      fast-glob: 3.2.12
       gulp: 4.0.2
       gulp-autoprefixer: 8.0.0_gulp@4.0.2
       gulp-clean-css: 4.3.0

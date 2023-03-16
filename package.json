@@ -24,6 +24,7 @@
   "dependencies": {
     "@x-plus/components": "workspace:*",
     "@x-plus/hooks": "workspace:*",
+    "@x-plus/locale": "workspace:*",
     "@x-plus/theme-chalk": "workspace:*",
     "@x-plus/utils": "workspace:*",
     "typescript": "^4.9.5",
@@ -51,6 +52,7 @@
     "esbuild": "^0.17.11",
     "eslint": "^8.35.0",
     "eslint-plugin-vue": "^9.9.0",
+    "fast-glob": "^3.2.12",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
