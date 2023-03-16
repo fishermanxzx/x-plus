@@ -1,9 +1,9 @@
 export default {
   name: 'es',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'Confirmar',
-      clear: 'Despejar',
+      clear: 'Despejar'
     },
     datepicker: {
       now: 'Ahora',
@@ -42,7 +42,7 @@ export default {
         wed: 'mié',
         thu: 'jue',
         fri: 'vie',
-        sat: 'sáb',
+        sat: 'sáb'
       },
       months: {
         jan: 'ene',
@@ -56,47 +56,47 @@ export default {
         sep: 'sep',
         oct: 'oct',
         nov: 'nov',
-        dec: 'dic',
-      },
+        dec: 'dic'
+      }
     },
     select: {
       loading: 'Cargando',
       noMatch: 'No hay datos que coincidan',
       noData: 'Sin datos',
-      placeholder: 'Seleccionar',
+      placeholder: 'Seleccionar'
     },
     cascader: {
       noMatch: 'No hay datos que coincidan',
       loading: 'Cargando',
       placeholder: 'Seleccionar',
-      noData: 'Sin datos',
+      noData: 'Sin datos'
     },
     pagination: {
       goto: 'Ir a',
       pagesize: '/página',
       total: 'Total {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       confirm: 'Aceptar',
       cancel: 'Cancelar',
-      error: 'Entrada inválida',
+      error: 'Entrada inválida'
     },
     upload: {
       deleteTip: 'Pulse Eliminar para retirar',
       delete: 'Eliminar',
       preview: 'Vista Previa',
-      continue: 'Continuar',
+      continue: 'Continuar'
     },
     table: {
       emptyText: 'Sin Datos',
       confirmFilter: 'Confirmar',
       resetFilter: 'Reiniciar',
       clearFilter: 'Despejar',
-      sumText: 'Suma',
+      sumText: 'Suma'
     },
     tree: {
-      emptyText: 'Sin Datos',
+      emptyText: 'Sin Datos'
     },
     transfer: {
       noMatch: 'No hay datos que coincidan',
@@ -104,17 +104,17 @@ export default {
       titles: ['Lista 1', 'Lista 2'],
       filterPlaceholder: 'Ingresar palabra clave',
       noCheckedFormat: '{total} artículos',
-      hasCheckedFormat: '{checked}/{total} revisados',
+      hasCheckedFormat: '{checked}/{total} revisados'
     },
     image: {
-      error: 'HA FALLADO',
+      error: 'HA FALLADO'
     },
     pageHeader: {
-      title: 'Volver',
+      title: 'Volver'
     },
     popconfirm: {
       confirmButtonText: 'Si',
-      cancelButtonText: 'No',
-    },
-  },
+      cancelButtonText: 'No'
+    }
+  }
 }

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <XConfigProvider namespace="s">
+    <XConfigProvider
+      namespace="s"
+      :locale="en"
+    >
       <XButton
         disabled
         @click="click"
@@ -18,13 +21,15 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
+import en from '@x-plus/locale/lang/en'
 export default defineComponent({
   setup() {
     const click = e => {
       console.log(12, e)
     }
     return {
-      click
+      click,
+      en
     }
   }
 })

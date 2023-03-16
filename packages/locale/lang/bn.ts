@@ -1,9 +1,9 @@
 export default {
   name: 'bn',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'ঠিক আছে',
-      clear: 'ক্লিয়ার',
+      clear: 'ক্লিয়ার'
     },
     datepicker: {
       now: 'এখন',
@@ -42,7 +42,7 @@ export default {
         wed: 'বুধ',
         thu: 'বৃহঃ',
         fri: 'শুক্র',
-        sat: 'শনি',
+        sat: 'শনি'
       },
       months: {
         jan: 'জানু',
@@ -56,20 +56,20 @@ export default {
         sep: 'সেপ্টে',
         oct: 'আক্টো',
         nov: 'নভে',
-        dec: 'ডিসে',
-      },
+        dec: 'ডিসে'
+      }
     },
     select: {
       loading: 'লোড হচ্ছে',
       noMatch: 'কোন মিল পওয়া যায়নি',
       noData: 'কোন ডাটা নেই',
-      placeholder: 'নির্বাচন করুন',
+      placeholder: 'নির্বাচন করুন'
     },
     cascader: {
       noMatch: 'কোন মিল পওয়া যায়নি',
       loading: 'লোড হচ্ছে',
       placeholder: 'নির্বাচন করুন',
-      noData: 'কোন ডাটা নেই',
+      noData: 'কোন ডাটা নেই'
     },
     pagination: {
       goto: 'যান',
@@ -77,29 +77,29 @@ export default {
       total: 'মোট {total}',
       pageClassifier: '',
       deprecationWarning:
-        'অপ্রচলিত (Deprecated) ব্যাবহার পওয়া গেছে, আরও জানতে চাইলে, দয়া করে el-pagination এর ডকুমেন্টেশন দেখুন',
+        'অপ্রচলিত (Deprecated) ব্যাবহার পওয়া গেছে, আরও জানতে চাইলে, দয়া করে el-pagination এর ডকুমেন্টেশন দেখুন'
     },
     messagebox: {
       title: 'বার্তা',
       confirm: 'ঠিক আছে',
       cancel: 'বাতিল',
-      error: 'ইনপুট ডাটা গ্রহনযোগ্য নয়',
+      error: 'ইনপুট ডাটা গ্রহনযোগ্য নয়'
     },
     upload: {
       deleteTip: 'অপসারণ করতে "ডিলিট" এ ক্লিক করুন',
       delete: 'ডিলিট',
       preview: 'প্রিভিউ',
-      continue: 'চালিয়ে যান',
+      continue: 'চালিয়ে যান'
     },
     table: {
       emptyText: 'কোন ডাটা নেই',
       confirmFilter: 'নিশ্চিত করুন',
       resetFilter: 'রিসেট',
       clearFilter: 'সব',
-      sumText: 'সারাংশ',
+      sumText: 'সারাংশ'
     },
     tree: {
-      emptyText: 'কোন ডাটা নেই',
+      emptyText: 'কোন ডাটা নেই'
     },
     transfer: {
       noMatch: 'কোন মিল পওয়া যায়নি',
@@ -107,17 +107,17 @@ export default {
       titles: ['লিস্ট ১', 'লিস্ট ২'],
       filterPlaceholder: 'সার্চ করুন',
       noCheckedFormat: '{total} আইটেম',
-      hasCheckedFormat: '{checked}/{total} টিক করা হয়েছে',
+      hasCheckedFormat: '{checked}/{total} টিক করা হয়েছে'
     },
     image: {
-      error: 'ব্যর্থ হয়েছে',
+      error: 'ব্যর্থ হয়েছে'
     },
     pageHeader: {
-      title: 'পিছনে',
+      title: 'পিছনে'
     },
     popconfirm: {
       confirmButtonText: 'হ্যা',
-      cancelButtonText: 'না',
-    },
-  },
+      cancelButtonText: 'না'
+    }
+  }
 }

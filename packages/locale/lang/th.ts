@@ -1,9 +1,9 @@
 export default {
   name: 'th',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'ตกลง',
-      clear: 'ล้างข้อมูล',
+      clear: 'ล้างข้อมูล'
     },
     datepicker: {
       now: 'ตอนนี้',
@@ -42,7 +42,7 @@ export default {
         wed: 'พ',
         thu: 'พฤ',
         fri: 'ศ',
-        sat: 'ส',
+        sat: 'ส'
       },
       months: {
         jan: 'ม.ค.',
@@ -56,48 +56,48 @@ export default {
         sep: 'ก.ย.',
         oct: 'ต.ค.',
         nov: 'พ.ย.',
-        dec: 'ธ.ค.',
-      },
+        dec: 'ธ.ค.'
+      }
     },
     select: {
       loading: 'กำลังโหลด',
       noMatch: 'ไม่พบข้อมูลที่ตรงกัน',
       noData: 'ไม่พบข้อมูล',
-      placeholder: 'เลือก',
+      placeholder: 'เลือก'
     },
     cascader: {
       noMatch: 'ไม่พบข้อมูลที่ตรงกัน',
       loading: 'กำลังโหลด',
       placeholder: 'เลือก',
-      noData: 'ไม่พบข้อมูล',
+      noData: 'ไม่พบข้อมูล'
     },
     pagination: {
       goto: 'ไปที่',
       pagesize: '/หน้า',
       total: 'ทั้งหมด {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'ข้อความ',
       confirm: 'ตกลง',
       cancel: 'ยกเลิก',
-      error: 'คุณป้อนข้อมูลไม่ถูกต้อง',
+      error: 'คุณป้อนข้อมูลไม่ถูกต้อง'
     },
     upload: {
       deleteTip: 'กดปุ่ม "ลบ" เพื่อลบออก',
       delete: 'ลบ',
       preview: 'ตัวอย่าง',
-      continue: 'ทำต่อ',
+      continue: 'ทำต่อ'
     },
     table: {
       emptyText: 'ไม่พบข้อมูล',
       confirmFilter: 'ยืนยัน',
       resetFilter: 'รีเซ็ต',
       clearFilter: 'ทั้งหมด',
-      sumText: 'รวม',
+      sumText: 'รวม'
     },
     tree: {
-      emptyText: 'ไม่พบข้อมูล',
+      emptyText: 'ไม่พบข้อมูล'
     },
     transfer: {
       noMatch: 'ไม่พบข้อมูลที่ตรงกัน',
@@ -105,17 +105,17 @@ export default {
       titles: ['List 1', 'List 2'], // to be translated
       filterPlaceholder: 'กรอกคีย์เวิร์ด',
       noCheckedFormat: '{total} items', // to be translated
-      hasCheckedFormat: '{checked}/{total} checked', // to be translated
+      hasCheckedFormat: '{checked}/{total} checked' // to be translated
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'ย้อนกลับ',
+      title: 'ย้อนกลับ'
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

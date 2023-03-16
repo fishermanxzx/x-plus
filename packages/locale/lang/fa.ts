@@ -1,9 +1,9 @@
 export default {
   name: 'fa',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'باشد',
-      clear: 'حذف',
+      clear: 'حذف'
     },
     datepicker: {
       now: 'اکنون',
@@ -42,7 +42,7 @@ export default {
         wed: 'چهارشنبه',
         thu: 'پنج​شنبه',
         fri: 'جمعه',
-        sat: 'شنبه',
+        sat: 'شنبه'
       },
       months: {
         jan: 'ژانویه',
@@ -56,48 +56,48 @@ export default {
         sep: 'سپتامبر',
         oct: 'اکتبر',
         nov: 'نوامبر',
-        dec: 'دسامبر',
-      },
+        dec: 'دسامبر'
+      }
     },
     select: {
       loading: 'بارگیری',
       noMatch: 'هیچ داده‌ای پیدا نشد',
       noData: 'اطلاعاتی وجود ندارد',
-      placeholder: 'انتخاب کنید',
+      placeholder: 'انتخاب کنید'
     },
     cascader: {
       noMatch: 'هیچ داده‌ای پیدا نشد',
       loading: 'بارگیری',
       placeholder: 'انتخاب کنید',
-      noData: 'اطلاعاتی وجود ندارد',
+      noData: 'اطلاعاتی وجود ندارد'
     },
     pagination: {
       goto: 'برو به',
       pagesize: '/صفحه',
       total: 'مجموع {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'پیام',
       confirm: 'باشه',
       cancel: 'لغو',
-      error: 'ورودی غیر مجاز',
+      error: 'ورودی غیر مجاز'
     },
     upload: {
       deleteTip: 'برای پاک کردن حذف را فشار دهید',
       delete: 'حذف',
       preview: 'پیش‌نمایش',
-      continue: 'ادامه',
+      continue: 'ادامه'
     },
     table: {
       emptyText: 'اطلاعاتی وجود ندارد',
       confirmFilter: 'تایید',
       resetFilter: 'حذف',
       clearFilter: 'همه',
-      sumText: 'جمع',
+      sumText: 'جمع'
     },
     tree: {
-      emptyText: 'اطلاعاتی وجود ندارد',
+      emptyText: 'اطلاعاتی وجود ندارد'
     },
     transfer: {
       noMatch: 'هیچ داده‌ای پیدا نشد',
@@ -105,17 +105,17 @@ export default {
       titles: ['لیست 1', 'لیست 2'],
       filterPlaceholder: 'کلید واژه هارو وارد کن',
       noCheckedFormat: '{total} مورد',
-      hasCheckedFormat: '{checked} مورد از {total} مورد انتخاب شده است',
+      hasCheckedFormat: '{checked} مورد از {total} مورد انتخاب شده است'
     },
     image: {
-      error: 'خطا در بارگیری تصویر',
+      error: 'خطا در بارگیری تصویر'
     },
     pageHeader: {
-      title: 'بازگشت',
+      title: 'بازگشت'
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

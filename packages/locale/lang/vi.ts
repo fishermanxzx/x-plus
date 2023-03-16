@@ -1,9 +1,9 @@
 export default {
   name: 'vi',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Xóa',
+      clear: 'Xóa'
     },
     datepicker: {
       now: 'Hiện tại',
@@ -42,7 +42,7 @@ export default {
         wed: 'T4',
         thu: 'T5',
         fri: 'T6',
-        sat: 'T7',
+        sat: 'T7'
       },
       months: {
         jan: 'Th.1',
@@ -56,48 +56,48 @@ export default {
         sep: 'Th.9',
         oct: 'Th.10',
         nov: 'Th.11',
-        dec: 'Th.12',
-      },
+        dec: 'Th.12'
+      }
     },
     select: {
       loading: 'Đang tải',
       noMatch: 'Dữ liệu không phù hợp',
       noData: 'Không tìm thấy dữ liệu',
-      placeholder: 'Chọn',
+      placeholder: 'Chọn'
     },
     cascader: {
       noMatch: 'Dữ liệu không phù hợp',
       loading: 'Đang tải',
       placeholder: 'Chọn',
-      noData: 'Không tìm thấy dữ liệu',
+      noData: 'Không tìm thấy dữ liệu'
     },
     pagination: {
       goto: 'Nhảy tới',
       pagesize: '/trang',
       total: 'Tổng {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'Thông báo',
       confirm: 'OK',
       cancel: 'Hủy',
-      error: 'Dữ liệu không hợp lệ',
+      error: 'Dữ liệu không hợp lệ'
     },
     upload: {
       deleteTip: 'Nhấn xoá để xoá',
       delete: 'Xóa',
       preview: 'Xem trước',
-      continue: 'Tiếp tục',
+      continue: 'Tiếp tục'
     },
     table: {
       emptyText: 'Không có dữ liệu',
       confirmFilter: 'Xác nhận',
       resetFilter: 'Làm mới',
       clearFilter: 'Xóa hết',
-      sumText: 'Tổng',
+      sumText: 'Tổng'
     },
     tree: {
-      emptyText: 'Không có dữ liệu',
+      emptyText: 'Không có dữ liệu'
     },
     transfer: {
       noMatch: 'Dữ liệu không phù hợp',
@@ -105,17 +105,17 @@ export default {
       titles: ['Danh sách 1', 'Danh sách 2'],
       filterPlaceholder: 'Nhập từ khóa',
       noCheckedFormat: '{total} mục',
-      hasCheckedFormat: '{checked}/{total} đã chọn ',
+      hasCheckedFormat: '{checked}/{total} đã chọn '
     },
     image: {
-      error: 'LỖI',
+      error: 'LỖI'
     },
     pageHeader: {
-      title: 'Quay lại',
+      title: 'Quay lại'
     },
     popconfirm: {
       confirmButtonText: 'Ok',
-      cancelButtonText: 'Huỷ',
-    },
-  },
+      cancelButtonText: 'Huỷ'
+    }
+  }
 }

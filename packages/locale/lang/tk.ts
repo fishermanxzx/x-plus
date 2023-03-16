@@ -1,9 +1,9 @@
 export default {
   name: 'tk',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Arassala',
+      clear: 'Arassala'
     },
     datepicker: {
       now: 'Şuwagt',
@@ -42,7 +42,7 @@ export default {
         wed: 'Çar',
         thu: 'Pen',
         fri: 'Ann',
-        sat: 'Şen',
+        sat: 'Şen'
       },
       months: {
         jan: 'Ýan',
@@ -56,48 +56,48 @@ export default {
         sep: 'Sep',
         oct: 'Okt',
         nov: 'Noý',
-        dec: 'Dek',
-      },
+        dec: 'Dek'
+      }
     },
     select: {
       loading: 'Indirilýär',
       noMatch: 'Hiçzat tapylmady',
       noData: 'Hiçzat ýok',
-      placeholder: 'Saýla',
+      placeholder: 'Saýla'
     },
     cascader: {
       noMatch: 'Hiçzat tapylmady',
       loading: 'Indirilýär',
       placeholder: 'Saýlaň',
-      noData: 'Hiçzat ýok',
+      noData: 'Hiçzat ýok'
     },
     pagination: {
       goto: 'Git',
       pagesize: '/sahypa',
       total: 'Umumy {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'Hat',
       confirm: 'OK',
       cancel: 'Bes et',
-      error: 'Ýalňyş girizme',
+      error: 'Ýalňyş girizme'
     },
     upload: {
       deleteTip: 'Pozmak üçin "poz" düwmä basyň',
       delete: 'Poz',
       preview: 'Gör',
-      continue: 'Dowam et',
+      continue: 'Dowam et'
     },
     table: {
       emptyText: 'Maglumat ýok',
       confirmFilter: 'Tassykla',
       resetFilter: 'Arassala',
       clearFilter: 'Hemmesi',
-      sumText: 'Jemi',
+      sumText: 'Jemi'
     },
     tree: {
-      emptyText: 'Maglumat ýok',
+      emptyText: 'Maglumat ýok'
     },
     transfer: {
       noMatch: 'Hiçzat tapylmady',
@@ -105,17 +105,17 @@ export default {
       titles: ['Sanaw 1', 'Sanaw 2'],
       filterPlaceholder: 'Gözleg sözlerini giriziň',
       noCheckedFormat: '{total} sany',
-      hasCheckedFormat: '{checked}/{total} saýlanan',
+      hasCheckedFormat: '{checked}/{total} saýlanan'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

@@ -1,9 +1,9 @@
 export default {
   name: 'ky',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'Мурунку',
-      clear: 'ачык',
+      clear: 'ачык'
     },
     datepicker: {
       now: 'азыр',
@@ -42,7 +42,7 @@ export default {
         wed: 'шаршемби',
         thu: 'бейшемби',
         fri: 'жума',
-        sat: 'ишемби',
+        sat: 'ишемби'
       },
       months: {
         jan: 'биринчи ай',
@@ -56,48 +56,48 @@ export default {
         sep: 'Алгачкы тогуз ай',
         oct: 'онунчу айда',
         nov: 'он биринчи ай',
-        dec: 'он экинчи айда',
-      },
+        dec: 'он экинчи айда'
+      }
     },
     select: {
       loading: 'Жүктөлүүдө',
       noMatch: 'Дал келген маалыматтар',
       noData: 'маалымат жок',
-      placeholder: 'тандоо',
+      placeholder: 'тандоо'
     },
     cascader: {
       noMatch: 'Дал келген маалыматтар',
       loading: 'Жүктөлүүдө',
       placeholder: 'тандоо',
-      noData: 'маалымат жок',
+      noData: 'маалымат жок'
     },
     pagination: {
       goto: 'Мурунку',
       pagesize: 'бир',
       total: 'бүтүндөй {total} сан ',
-      pageClassifier: 'бет',
+      pageClassifier: 'бет'
     },
     messagebox: {
       title: 'тез',
       confirm: 'белгилөө',
       cancel: 'жокко чыгарылды',
-      error: 'Маалыматтарды киргизүү мыйзамдуу эмес!',
+      error: 'Маалыматтарды киргизүү мыйзамдуу эмес!'
     },
     upload: {
       deleteTip: 'Жок кылуу баскычын басуу жок',
       delete: 'жок кылуу',
       preview: 'ЖМКнын картинки',
-      continue: 'жүктөп бер',
+      continue: 'жүктөп бер'
     },
     table: {
       emptyText: 'маалымат жок',
       confirmFilter: 'чыпка',
       resetFilter: 'кайра орнотуу',
       clearFilter: 'бүткөн',
-      sumText: 'Бардыгы болуп',
+      sumText: 'Бардыгы болуп'
     },
     tree: {
-      emptyText: 'маалымат жок',
+      emptyText: 'маалымат жок'
     },
     transfer: {
       noMatch: 'Дал келген маалыматтар',
@@ -105,17 +105,17 @@ export default {
       titles: ['1 тизмеси', '2 тизмеси'],
       filterPlaceholder: 'Сураныч, издөө кирет',
       noCheckedFormat: 'бүтүндөй {total} сан',
-      hasCheckedFormat: 'Тандалган {checked}/{total} сан',
+      hasCheckedFormat: 'Тандалган {checked}/{total} сан'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

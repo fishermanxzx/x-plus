@@ -1,9 +1,9 @@
 export default {
   name: 'uk',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Очистити',
+      clear: 'Очистити'
     },
     datepicker: {
       now: 'Зараз',
@@ -42,7 +42,7 @@ export default {
         wed: 'Ср',
         thu: 'Чт',
         fri: 'Пт',
-        sat: 'Сб',
+        sat: 'Сб'
       },
       months: {
         jan: 'Січ',
@@ -56,48 +56,48 @@ export default {
         sep: 'Вер',
         oct: 'Жов',
         nov: 'Лис',
-        dec: 'Гру',
-      },
+        dec: 'Гру'
+      }
     },
     select: {
       loading: 'Завантаження',
       noMatch: 'Співпадінь не знайдено',
       noData: 'Немає даних',
-      placeholder: 'Обрати',
+      placeholder: 'Обрати'
     },
     cascader: {
       noMatch: 'Співпадінь не знайдено',
       loading: 'Завантаження',
       placeholder: 'Обрати',
-      noData: 'Немає даних',
+      noData: 'Немає даних'
     },
     pagination: {
       goto: 'Перейти',
       pagesize: 'на сторінці',
       total: 'Всього {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'Повідомлення',
       confirm: 'OK',
       cancel: 'Відміна',
-      error: 'Неприпустимий ввід даних',
+      error: 'Неприпустимий ввід даних'
     },
     upload: {
       deleteTip: 'натисніть кнопку щоб видалити',
       delete: 'Видалити',
       preview: 'Перегляд',
-      continue: 'Продовжити',
+      continue: 'Продовжити'
     },
     table: {
       emptyText: 'Немає даних',
       confirmFilter: 'Підтвердити',
       resetFilter: 'Скинути',
       clearFilter: 'Все',
-      sumText: 'Сума',
+      sumText: 'Сума'
     },
     tree: {
-      emptyText: 'Немає даних',
+      emptyText: 'Немає даних'
     },
     transfer: {
       noMatch: 'Співпадінь не знайдено',
@@ -105,17 +105,17 @@ export default {
       titles: ['Список 1', 'Список 2'],
       filterPlaceholder: 'Введіть ключове слово',
       noCheckedFormat: '{total} пунктів',
-      hasCheckedFormat: '{checked}/{total} вибрано',
+      hasCheckedFormat: '{checked}/{total} вибрано'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

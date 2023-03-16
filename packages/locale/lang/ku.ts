@@ -1,9 +1,9 @@
 export default {
   name: 'ku',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'Temam',
-      clear: 'Paqij bike',
+      clear: 'Paqij bike'
     },
     datepicker: {
       now: 'Niha',
@@ -42,7 +42,7 @@ export default {
         wed: 'Çar',
         thu: 'Pên',
         fri: 'În',
-        sat: 'Şem',
+        sat: 'Şem'
       },
       months: {
         jan: 'Rêb',
@@ -56,48 +56,48 @@ export default {
         sep: 'Rez',
         oct: 'Kew',
         nov: 'Sar',
-        dec: 'Ber',
-      },
+        dec: 'Ber'
+      }
     },
     select: {
       loading: 'Bardibe',
       noMatch: 'Li hembere ve agahî tune',
       noData: 'Agahî tune',
-      placeholder: 'Bibijêre',
+      placeholder: 'Bibijêre'
     },
     cascader: {
       noMatch: 'Li hembere ve agahî tune',
       loading: 'Bardibe',
       placeholder: 'Bibijêre',
-      noData: 'Agahî tune',
+      noData: 'Agahî tune'
     },
     pagination: {
       goto: 'Biçe',
       pagesize: '/rupel',
       total: 'Tevahî {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'Peyam',
       confirm: 'Temam',
       cancel: 'Betal bike',
-      error: 'Beyana çewt',
+      error: 'Beyana çewt'
     },
     upload: {
       deleteTip: 'ji bo rake pêl "delete" bike',
       delete: 'Rake',
       preview: 'Pêşdîtin',
-      continue: 'Berdewam',
+      continue: 'Berdewam'
     },
     table: {
       emptyText: 'Agahî tune',
       confirmFilter: 'Piştrast bike',
       resetFilter: 'Jê bibe',
       clearFilter: 'Hemû',
-      sumText: 'Kom',
+      sumText: 'Kom'
     },
     tree: {
-      emptyText: 'Agahî tune',
+      emptyText: 'Agahî tune'
     },
     transfer: {
       noMatch: 'Li hembere ve agahî tune',
@@ -105,17 +105,17 @@ export default {
       titles: ['Lîste 1', 'Lîste 2'],
       filterPlaceholder: 'Binivîse',
       noCheckedFormat: '{total} lib',
-      hasCheckedFormat: '{checked}/{total} bijartin',
+      hasCheckedFormat: '{checked}/{total} bijartin'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

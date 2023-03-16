@@ -1,9 +1,9 @@
 export default {
   name: 'sr',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Поништи',
+      clear: 'Поништи'
     },
     datepicker: {
       now: 'Сад',
@@ -42,7 +42,7 @@ export default {
         wed: 'Сре',
         thu: 'Чет',
         fri: 'Пет',
-        sat: 'Суб',
+        sat: 'Суб'
       },
       months: {
         jan: 'јан',
@@ -56,48 +56,48 @@ export default {
         sep: 'сеп',
         oct: 'окт',
         nov: 'нов',
-        dec: 'дец',
-      },
+        dec: 'дец'
+      }
     },
     select: {
       loading: 'Учитавање',
       noMatch: 'Нема резултата',
       noData: 'Нема података',
-      placeholder: 'Изабери',
+      placeholder: 'Изабери'
     },
     cascader: {
       noMatch: 'Нема резултата',
       loading: 'Учитавање',
       placeholder: 'Изабери',
-      noData: 'Нема података',
+      noData: 'Нема података'
     },
     pagination: {
       goto: 'Иди на',
       pagesize: '/страни',
       total: 'Укупно {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'Порука',
       confirm: 'OK',
       cancel: 'Откажи',
-      error: 'Неисправан унос',
+      error: 'Неисправан унос'
     },
     upload: {
       deleteTip: 'притисни БРИШИ да обришеш',
       delete: 'Бриши',
       preview: 'Види',
-      continue: 'Настави',
+      continue: 'Настави'
     },
     table: {
       emptyText: 'Нема података',
       confirmFilter: 'Потврди',
       resetFilter: 'Ресетуј',
       clearFilter: 'Све',
-      sumText: 'Збир',
+      sumText: 'Збир'
     },
     tree: {
-      emptyText: 'Нема података',
+      emptyText: 'Нема података'
     },
     transfer: {
       noMatch: 'Нема резултата',
@@ -105,17 +105,17 @@ export default {
       titles: ['Листа 1', 'Листа 2'], // to be translated
       filterPlaceholder: 'Унеси кључну реч', // to be translated
       noCheckedFormat: '{total} ставки', // to be translated
-      hasCheckedFormat: '{checked}/{total} обележених', // to be translated
+      hasCheckedFormat: '{checked}/{total} обележених' // to be translated
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

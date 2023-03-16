@@ -1,9 +1,9 @@
 export default {
   name: 'lt',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'OK',
-      clear: 'Valyti',
+      clear: 'Valyti'
     },
     datepicker: {
       now: 'Dabar',
@@ -42,7 +42,7 @@ export default {
         wed: 'T.',
         thu: 'K.',
         fri: 'Pn.',
-        sat: 'Š.',
+        sat: 'Š.'
       },
       months: {
         jan: 'Sau',
@@ -56,48 +56,48 @@ export default {
         sep: 'Rugs',
         oct: 'Spa',
         nov: 'Lap',
-        dec: 'Gruo',
-      },
+        dec: 'Gruo'
+      }
     },
     select: {
       loading: 'Kraunasi',
       noMatch: 'Duomenų nerasta',
       noData: 'Nėra duomenų',
-      placeholder: 'Pasirink',
+      placeholder: 'Pasirink'
     },
     cascader: {
       noMatch: 'Duomenų nerasta',
       loading: 'Kraunasi',
       placeholder: 'Pasirink',
-      noData: 'Nėra duomenų',
+      noData: 'Nėra duomenų'
     },
     pagination: {
       goto: 'Eiti į',
       pagesize: '/p',
       total: 'Viso {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'Žinutė',
       confirm: 'OK',
       cancel: 'Atšaukti',
-      error: 'Klaida įvestuose duomenyse',
+      error: 'Klaida įvestuose duomenyse'
     },
     upload: {
       deleteTip: 'spauskite "Trinti" norėdami pašalinti',
       delete: 'Trinti',
       preview: 'Peržiūrėti',
-      continue: 'Toliau',
+      continue: 'Toliau'
     },
     table: {
       emptyText: 'Duomenų nerasta',
       confirmFilter: 'Patvirtinti',
       resetFilter: 'Atstatyti',
       clearFilter: 'Išvalyti',
-      sumText: 'Suma',
+      sumText: 'Suma'
     },
     tree: {
-      emptyText: 'Nėra duomenų',
+      emptyText: 'Nėra duomenų'
     },
     transfer: {
       noMatch: 'Duomenų nerasta',
@@ -105,17 +105,17 @@ export default {
       titles: ['Sąrašas 1', 'Sąrašas 2'],
       filterPlaceholder: 'Įvesk raktažodį',
       noCheckedFormat: 'Viso: {total}',
-      hasCheckedFormat: 'Pažymėta {checked} iš {total}',
+      hasCheckedFormat: 'Pažymėta {checked} iš {total}'
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FAILED' // to be translated
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Back' // to be translated
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

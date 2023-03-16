@@ -1,9 +1,9 @@
 export default {
   name: 'uz-uz',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'Qabul qilish',
-      clear: 'Tozalash',
+      clear: 'Tozalash'
     },
     datepicker: {
       now: 'Hozir',
@@ -42,7 +42,7 @@ export default {
         wed: 'Chor',
         thu: 'Pay',
         fri: 'Jum',
-        sat: 'Shan',
+        sat: 'Shan'
       },
       months: {
         jan: 'Yan',
@@ -56,48 +56,48 @@ export default {
         sep: 'Sen',
         oct: 'Okt',
         nov: 'Noy',
-        dec: 'Dek',
-      },
+        dec: 'Dek'
+      }
     },
     select: {
       loading: 'Yuklanmoqda',
       noMatch: 'Mos maʼlumot yoʻq',
       noData: 'Maʼlumot yoʻq',
-      placeholder: 'Tanladizngiz',
+      placeholder: 'Tanladizngiz'
     },
     cascader: {
       noMatch: 'Mos maʼlumot topilmadi',
       loading: 'Yuklanmoqda',
       placeholder: 'Tanlash',
-      noData: 'Maʼlumot yoʻq',
+      noData: 'Maʼlumot yoʻq'
     },
     pagination: {
       goto: 'Oʻtish',
       pagesize: '/sahifa',
       total: 'Barchasi {total} ta',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'Xabar',
       confirm: 'Qabul qilish',
       cancel: 'Bekor qilish',
-      error: 'Xatolik',
+      error: 'Xatolik'
     },
     upload: {
       deleteTip: 'Oʻchirish tugmasini bosib oʻchiring',
       delete: 'Oʻchirish',
       preview: 'Oldin koʻrish',
-      continue: 'Davom qilish',
+      continue: 'Davom qilish'
     },
     table: {
       emptyText: 'Boʻsh',
       confirmFilter: 'Qabul qilish',
       resetFilter: 'Oldingi holatga qaytarish',
       clearFilter: 'Jami',
-      sumText: 'Summasi',
+      sumText: 'Summasi'
     },
     tree: {
-      emptyText: 'Maʼlumot yoʻq',
+      emptyText: 'Maʼlumot yoʻq'
     },
     transfer: {
       noMatch: 'Mos maʼlumot topilmadi',
@@ -105,17 +105,17 @@ export default {
       titles: ['1-jadval', '2-jadval'],
       filterPlaceholder: 'Kalit soʻzni kiriting',
       noCheckedFormat: '{total} ta element',
-      hasCheckedFormat: '{checked}/{total} ta belgilandi',
+      hasCheckedFormat: '{checked}/{total} ta belgilandi'
     },
     image: {
-      error: 'Xatolik',
+      error: 'Xatolik'
     },
     pageHeader: {
-      title: 'Orqaga',
+      title: 'Orqaga'
     },
     popconfirm: {
       confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
-    },
-  },
+      cancelButtonText: 'No' // to be translated
+    }
+  }
 }

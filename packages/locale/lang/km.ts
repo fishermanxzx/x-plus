@@ -1,9 +1,9 @@
 export default {
   name: 'km',
-  el: {
+  x: {
     colorpicker: {
       confirm: 'យល់ព្រម',
-      clear: 'លុប',
+      clear: 'លុប'
     },
     datepicker: {
       now: 'ឥឡូវ​នេះ',
@@ -42,7 +42,7 @@ export default {
         wed: 'ពុធ',
         thu: 'ព្រហ',
         fri: 'សុក្រ',
-        sat: 'សៅរ៍',
+        sat: 'សៅរ៍'
       },
       months: {
         jan: 'មករា',
@@ -56,48 +56,48 @@ export default {
         sep: 'កញ្ញា',
         oct: 'តុលា',
         nov: 'វិច្ឆិកា',
-        dec: 'ធ្នូ',
-      },
+        dec: 'ធ្នូ'
+      }
     },
     select: {
       loading: 'កំពុងផ្ទុក',
       noMatch: 'គ្មានទិន្នន័យដូច',
       noData: 'គ្មានទិន្នន័យ',
-      placeholder: 'ជ្រើសរើស',
+      placeholder: 'ជ្រើសរើស'
     },
     cascader: {
       noMatch: 'គ្មានទិន្នន័យដូច',
       loading: 'កំពុងផ្ទុក',
       placeholder: 'ជ្រើសរើស',
-      noData: 'គ្មានទិន្នន័យ',
+      noData: 'គ្មានទិន្នន័យ'
     },
     pagination: {
       goto: 'ទៅកាន់',
       pagesize: '/ទំព័រ',
       total: 'សរុប {total}',
-      pageClassifier: '',
+      pageClassifier: ''
     },
     messagebox: {
       title: 'សារ',
       confirm: 'យល់ព្រម',
       cancel: 'បោះបង់',
-      error: 'ការបញ្ចូលមិនត្រូវបានអនុញ្ញាត',
+      error: 'ការបញ្ចូលមិនត្រូវបានអនុញ្ញាត'
     },
     upload: {
       deleteTip: 'ចុចលុបដើម្បីដកចេញ',
       delete: 'លុប',
       preview: 'មើល',
-      continue: 'បន្ត',
+      continue: 'បន្ត'
     },
     table: {
       emptyText: 'គ្មានទិន្នន័យ',
       confirmFilter: 'យល់ព្រម',
       resetFilter: 'កំណត់ឡើងវិញ',
       clearFilter: 'ទាំងអស់',
-      sumText: 'បូក',
+      sumText: 'បូក'
     },
     tree: {
-      emptyText: 'គ្មានទិន្នន័យ',
+      emptyText: 'គ្មានទិន្នន័យ'
     },
     transfer: {
       noMatch: 'គ្មានទិន្នន័យដូច',
@@ -105,17 +105,17 @@ export default {
       titles: ['បញ្ជី ១', 'បញ្ជី ២'],
       filterPlaceholder: 'បញ្ចូលពាក្យ',
       noCheckedFormat: '{total} ធាតុ',
-      hasCheckedFormat: '{checked}/{total} បានជ្រើសយក',
+      hasCheckedFormat: '{checked}/{total} បានជ្រើសយក'
     },
     image: {
-      error: 'មិនបានជោគជ័យ',
+      error: 'មិនបានជោគជ័យ'
     },
     pageHeader: {
-      title: 'ត្រលប់ក្រោយ',
+      title: 'ត្រលប់ក្រោយ'
     },
     popconfirm: {
       confirmButtonText: 'យល់ព្រម',
-      cancelButtonText: 'មិនព្រម',
-    },
-  },
+      cancelButtonText: 'មិនព្រម'
+    }
+  }
 }
