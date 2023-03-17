@@ -10,6 +10,7 @@ importers:
       '@pnpm/types': ^8.10.0
       '@rollup/plugin-commonjs': ^24.0.1
       '@rollup/plugin-node-resolve': ^15.0.1
+      '@types/fs-extra': ^11.0.1
       '@types/gulp': ^4.0.10
       '@types/gulp-autoprefixer': ^0.0.33
       '@types/gulp-clean-css': ^4.3.0
@@ -32,6 +33,7 @@ importers:
       eslint: ^8.35.0
       eslint-plugin-vue: ^9.9.0
       fast-glob: ^3.2.12
+      fs-extra: ^11.1.0
       gulp: ^4.0.2
       gulp-autoprefixer: ^8.0.0
       gulp-clean-css: ^4.3.0
@@ -46,6 +48,7 @@ importers:
       rollup: ^3.19.1
       rollup-plugin-esbuild: ^5.0.0
       sass: ^1.58.3
+      ts-morph: ^17.0.1
       typescript: ^4.9.5
       vite: ^4.1.0
       vitest: ^0.29.2
@@ -69,6 +72,7 @@ importers:
       '@pnpm/types': 8.10.0
       '@rollup/plugin-commonjs': 24.0.1_rollup@3.19.1
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.19.1
+      '@types/fs-extra': 11.0.1
       '@types/gulp': 4.0.10
       '@types/gulp-autoprefixer': 0.0.33
       '@types/gulp-clean-css': 4.3.0
@@ -85,6 +89,7 @@ importers:
       eslint: 8.35.0
       eslint-plugin-vue: 9.9.0_eslint@8.35.0
       fast-glob: 3.2.12
+      fs-extra: 11.1.0
       gulp: 4.0.2
       gulp-autoprefixer: 8.0.0_gulp@4.0.2
       gulp-clean-css: 4.3.0
@@ -96,6 +101,7 @@ importers:
       rollup: 3.19.1
       rollup-plugin-esbuild: 5.0.0_caszwlkzzxo5hzxqu45fmzwfye
       sass: 1.58.3
+      ts-morph: 17.0.1
       vite: 4.1.4_sass@1.58.3
       vitest: 0.29.2_z3z4f6mbpwaj73djg5uk4jdyjq
 
@@ -1067,6 +1073,15 @@ packages:
       rollup: 3.19.1
     dev: true
 
+  /@ts-morph/common/0.18.1:
+    resolution: {integrity: sha512-RVE+zSRICWRsfrkAw5qCAK+4ZH9kwEFv5h0+/YeHTLieWP7F4wWq4JsKFuNWG+fYh/KF+8rAtgdj5zb2mm+DVA==}
+    dependencies:
+      fast-glob: 3.2.12
+      minimatch: 5.1.6
+      mkdirp: 1.0.4
+      path-browserify: 1.0.1
+    dev: true
+
   /@tsconfig/node10/1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==}
     dev: true
@@ -1106,6 +1121,13 @@ packages:
 
   /@types/expect/1.20.4:
     resolution: {integrity: sha512-Q5Vn3yjTDyCMV50TB6VRIbQNxSE4OmZR86VSbGaNpfUolm0iePBB4KdEEHmxoY5sT2+2DIvXW0rvMDP2nHZ4Mg==}
+    dev: true
+
+  /@types/fs-extra/11.0.1:
+    resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
+    dependencies:
+      '@types/jsonfile': 6.1.1
+      '@types/node': 18.14.6
     dev: true
 
   /@types/glob-stream/6.1.1:
@@ -1163,6 +1185,12 @@ packages:
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
+    dev: true
+
+  /@types/jsonfile/6.1.1:
+    resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
+    dependencies:
+      '@types/node': 18.14.6
     dev: true
 
   /@types/lodash-es/4.17.7:
@@ -2232,6 +2260,10 @@ packages:
       inherits: 2.0.4
       process-nextick-args: 2.0.1
       readable-stream: 2.3.8
+    dev: true
+
+  /code-block-writer/11.0.3:
+    resolution: {integrity: sha512-NiujjUFB4SwScJq2bwbYUtXbZhBSlY6vYzm++3Q6oC+U+injTqfPYFK8wS9COOmb2lueqp0ZRB4nK1VYeHgNyw==}
     dev: true
 
   /code-point-at/1.1.0:
@@ -4379,6 +4411,12 @@ packages:
       is-extendable: 1.0.1
     dev: true
 
+  /mkdirp/1.0.4:
+    resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dev: true
+
   /mlly/1.1.1:
     resolution: {integrity: sha512-Jnlh4W/aI4GySPo6+DyTN17Q75KKbLTyFK8BrGhjNP4rxuUjbRWhE6gHg3bs33URWAF44FRm7gdQA348i3XxRw==}
     dependencies:
@@ -4724,6 +4762,10 @@ packages:
   /pascalcase/0.1.1:
     resolution: {integrity: sha512-XHXfu/yOQRy9vYOtUDVMN60OEJjW013GoObG1o+xwQTpB9eYJX/BjXMsdW13ZDPruFhYYn0AG22w0xgQMwl3Nw==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /path-browserify/1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
     dev: true
 
   /path-dirname/1.0.2:
@@ -5725,6 +5767,13 @@ packages:
   /trim-newlines/3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
     engines: {node: '>=8'}
+    dev: true
+
+  /ts-morph/17.0.1:
+    resolution: {integrity: sha512-10PkHyXmrtsTvZSL+cqtJLTgFXkU43Gd0JCc0Rw6GchWbqKe0Rwgt1v3ouobTZwQzF1mGhDeAlWYBMGRV7y+3g==}
+    dependencies:
+      '@ts-morph/common': 0.18.1
+      code-block-writer: 11.0.3
     dev: true
 
   /ts-node/10.9.1_alpjt73dvgv6kni625hu7f2l4m:

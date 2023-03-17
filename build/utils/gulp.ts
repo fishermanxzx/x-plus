@@ -1,6 +1,5 @@
 import type { TaskFunction } from 'gulp'
 import { run } from './process'
-import { buildRoot } from './path'
 
 export const withTaskName = <T extends TaskFunction>(name: string, fn: T) =>
   Object.assign(fn, { displayName: name })
