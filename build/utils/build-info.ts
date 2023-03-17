@@ -1,5 +1,5 @@
 import path from 'path'
-import { PKG_NAME } from './pkg'
+import { PKG_NAME, PKG_PREFIX } from './pkg'
 import { xpOutput } from './path'
 import type { ModuleFormat } from 'rollup'
 
@@ -16,7 +16,7 @@ export interface BuildInfo {
     path: string
   }
 
-  bundle?: {
+  bundle: {
     /** e.g: `element-plus/es` */
     path: string
   }
@@ -56,3 +56,13 @@ export type BuildConfig = typeof buildConfig
 export type BuildConfigEntries = [Module, BuildInfo][]
 
 export const target = 'es2018'
+
+/** used for type generator */
+export const pathRewriter = (module: Module) => {
+  const config = buildConfig[module]
+  return (id: string) => {
+    id = id.replaceAll(`${PKG_PREFIX}/theme-chalk`, `${PKG_NAME}/theme-chalk`)
+    id = id.replaceAll(`${PKG_PREFIX}/`, `${config.bundle.path}/`)
+    return id
+  }
+}
