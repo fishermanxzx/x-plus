@@ -23,6 +23,8 @@
     "noUnusedLocals": true,
     "skipLibCheck": true, // 跳过类库检测
     "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "dist",
     "paths": {
       "@x-plus/*": ["packages/*"]
     }

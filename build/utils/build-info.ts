@@ -55,7 +55,7 @@ export const buildConfigEntries = Object.entries(
 export type BuildConfig = typeof buildConfig
 export type BuildConfigEntries = [Module, BuildInfo][]
 
-export const target = 'es2018'
+export const target = 'ES6'
 
 /** used for type generator */
 export const pathRewriter = (module: Module) => {
