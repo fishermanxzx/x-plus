@@ -1,4 +1,5 @@
 import { rollup } from 'rollup'
+import type { Plugin } from 'rollup'
 import Vue from '@vitejs/plugin-vue'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
@@ -25,7 +26,7 @@ export const modules = async () => {
       XPlusAlias(),
       Vue({
         isProduction: false
-      }),
+      }) as Plugin,
       nodeResolve({
         extensions: ['.mjs', '.js', '.json', '.ts']
       }),

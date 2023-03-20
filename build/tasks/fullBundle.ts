@@ -28,7 +28,7 @@ async function buildFullEntry(minify: boolean) {
     XPlusAlias(),
     Vue({
       isProduction: true
-    }),
+    }) as Plugin,
     nodeResolve({
       extensions: ['.mjs', '.js', '.json', '.ts']
     }),
