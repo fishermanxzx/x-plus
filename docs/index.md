@@ -7,13 +7,15 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /guide/quieStart
+      link: /guide/quickStart
 
 features:
   - icon: 🛠️
     title: 组件库构建流程
-    details: Vue3 组件库构建...
+    details: 组件库构建流程
+    link: /guide/build
   - icon: ⚙️
     title: 组件库单元测试
-    details: Vue3 组件库测试...
+    details: 如何进行单元测试
+    link: /guide/unitTesting
 ---
