@@ -1,12 +1,11 @@
 {
-  "name": "x-plus",
+  "name": "@yxkj/x-plus",
   "author": "xiezixuan",
   "version": "1.0.0",
   "description": "A Component Library for Vue 3",
   "keywords": [
     "x-plus",
     "component library",
-    "ui framework",
     "ui",
     "vue"
   ],
