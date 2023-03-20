@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "pnpm -C play dev",
     "doc:dev": "pnpm -C docs dev",
+    "doc:build": "pnpm -C docs build",
+    "doc:serve": "pnpm -C docs serve",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "lint-fix": "eslint --fix --ext .js,.ts,.vue ./",
     "prepare": "husky install",
