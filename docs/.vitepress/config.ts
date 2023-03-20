@@ -22,7 +22,9 @@ export default {
           text: '指南',
           items: [
             { text: '安装', link: '/guide/installation' },
-            { text: '快速开始', link: '/guide/quickstart' }
+            { text: '快速开始', link: '/guide/quickstart' },
+            { text: '单元测试', link: '/guide/unitTesting' },
+            { text: '构建流程', link: '/guide/build' }
           ]
         }
       ],
