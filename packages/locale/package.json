@@ -1,0 +1,8 @@
+{
+  "name": "@x-plus/locale",
+  "version": "0.0.1",
+  "description": "X Plus locale",
+  "license": "MIT",
+  "main": "index.ts",
+  "module": "index.ts"
+}

@@ -1,8 +1,7 @@
 import { ExtractPropTypes, PropType } from 'vue'
 const buttonProps = {
   size: {
-    type: String as PropType<'default' | 'small' | 'large'>,
-    default: 'default'
+    type: String as PropType<'small' | 'large'>
   },
   plain: {
     type: Boolean,
@@ -14,9 +13,8 @@ const buttonProps = {
   },
   type: {
     type: String as PropType<
-      'default' | 'primary' | 'success' | 'info' | 'warning' | 'danger'
-    >,
-    default: 'default'
+      'primary' | 'success' | 'info' | 'warning' | 'danger'
+    >
   }
 }
 type ButtonProps = ExtractPropTypes<typeof buttonProps>

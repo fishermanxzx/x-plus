@@ -6,7 +6,6 @@
       ns.m(type),
       ns.is('disabled', disabled),
       ns.is('plain', plain),
-      ns.is('loading', loading)
     ]"
     @click="handleClick"
   >
@@ -18,7 +17,7 @@
 <script lang="ts">
 import { useNamespace } from '@x-plus/hooks'
 import { defineComponent } from 'vue'
-import { buttonProps } from './buttons'
+import { buttonProps } from './button'
 export default defineComponent({
   name: 'XButton',
   props: buttonProps,

@@ -1,13 +1,15 @@
+import { Language, zhCn } from '@x-plus/locale'
 const defaultNamespace = 'x'
-const defaultConfig = {
-  namespace: defaultNamespace
+const config = {
+  namespace: defaultNamespace,
+  locale: zhCn as Language
 }
-type Config = typeof defaultConfig
-type ConfigProps = keyof typeof defaultConfig
-const useGlobalConfig = (prop: ConfigProps) => {
-  return defaultConfig[prop]
+type Config = typeof config
+type ConfigProps = keyof typeof config
+const useGlobalConfig = <T extends ConfigProps>(prop: T): Config[T] => {
+  return config[prop]
 }
 const mergeConfig = (newConfig: Config) => {
-  Object.assign(defaultConfig, newConfig)
+  Object.assign(config, newConfig)
 }
-export { useGlobalConfig, defaultConfig, mergeConfig }
+export { useGlobalConfig, config, mergeConfig }
