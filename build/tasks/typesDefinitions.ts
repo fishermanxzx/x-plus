@@ -84,7 +84,7 @@ async function addSourceFiles(project: Project) {
       onlyFiles: true
     })
   )
-  const epPaths = excludeFiles(
+  const xpPaths = excludeFiles(
     await glob(globSourceFile, {
       cwd: xpRoot,
       onlyFiles: true
@@ -123,7 +123,7 @@ async function addSourceFiles(project: Project) {
         sourceFiles.push(sourceFile)
       }
     }),
-    ...epPaths.map(async file => {
+    ...xpPaths.map(async file => {
       const content = await readFile(path.resolve(xpRoot, file), 'utf-8')
       sourceFiles.push(
         /*
