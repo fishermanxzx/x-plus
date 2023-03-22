@@ -11,7 +11,15 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended'
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: ['**/__tests__/**'],
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
+        'no-console': 'off'
+      }
+    }
+  ],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -20,7 +28,13 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
+    // typescript
     '@typescript-eslint/no-extra-semi': 'off',
-    '@typescript-eslint/no-explicit-any': 'off'
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    // vue
+    'vue/prefer-import-from-vue': 'off',
+    'vue/require-default-prop': 'off',
+    'vue/no-v-html': 'off'
   }
 }

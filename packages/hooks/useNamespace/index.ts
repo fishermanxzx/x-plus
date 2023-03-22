@@ -50,7 +50,7 @@ const useNamespace = (block: string) => {
   }
 
   // for css var
-  // --el-xxx: value;
+  // --x-xxx: value;
   const cssVar = (object: Record<string, string>) => {
     const styles: Record<string, string> = {}
     for (const key in object) {

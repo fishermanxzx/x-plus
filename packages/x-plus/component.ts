@@ -1,3 +1,15 @@
-import { XButton, XConfigProvider } from '@x-plus/components'
+import {
+  XButton,
+  XConfigProvider,
+  XTable,
+  XTableHoverContain,
+  XTooltip
+} from '@x-plus/components'
 import type { Plugin } from 'vue'
-export default [XButton, XConfigProvider] as Plugin[]
+export default [
+  XButton,
+  XConfigProvider,
+  XTable,
+  XTableHoverContain,
+  XTooltip
+] as Plugin[]
