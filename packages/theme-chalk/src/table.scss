@@ -1,0 +1,299 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+@mixin scroll {
+  & {
+    // 避免拖动时选中
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10+ and Edge */
+    user-select: none;
+  }
+
+  /* Standard syntax */
+  // 隐藏滚动条
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include when((scrolling-middle, scrolling-right)) {
+    th,
+    td {
+      &.left-fixed-last {
+        &::after {
+          box-shadow: getCssVar('table-fixed-left-column');
+          position: absolute;
+          top: 0;
+          bottom: 0px;
+          right: 0px;
+          width: 5px;
+          transition: box-shadow 0.3s;
+          content: '';
+          pointer-events: none;
+          touch-action: none;
+        }
+      }
+    }
+  }
+
+  @include when((scrolling-middle, scrolling-left)) {
+    th,
+    td {
+      &.right-fixed-first {
+        &::after {
+          box-shadow: getCssVar('table-fixed-right-column');
+          position: absolute;
+          top: 0;
+          bottom: 0px;
+          left: 0px;
+          width: 5px;
+          transition: box-shadow 0.3s;
+          content: '';
+          pointer-events: none;
+          touch-action: none;
+        }
+      }
+    }
+  }
+}
+@include b(table) {
+  @include set-component-css-var('table', $table);
+}
+
+@include b(table) {
+  @keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: getCssVar('table-bg-color');
+  @include e(anchor) {
+    height: 0px;
+    width: 0px;
+    position: relative;
+  }
+  // when data is empty
+  @include e(container) {
+    box-sizing: border-box;
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed;
+      text-align: left;
+      width: 100%;
+    }
+    tr {
+      th {
+        background-color: getCssVar('table-th-bg-color');
+      }
+      td {
+        background-color: getCssVar('table-td-bg-color');
+      }
+      &:hover {
+        td {
+          background-color: getCssVar('table-td-hover-bg-color');
+        }
+      }
+    }
+    th {
+      border-bottom: 1px solid getCssVar('table-border-color');
+      color: getCssVar('table-header-text-color');
+
+      &.sortable {
+        cursor: pointer;
+      }
+    }
+
+    td {
+      border-bottom: 1px solid getCssVar('table-border-color');
+      color: getCssVar('table-text-color');
+    }
+    th,
+    td {
+      padding: 12px 8px;
+      overflow-wrap: break-word;
+      vertical-align: middle;
+      overflow: hidden;
+      font-size: 12px;
+      &.left {
+        text-align: left;
+      }
+      &.center {
+        text-align: center;
+      }
+      &.right {
+        text-align: right;
+      }
+      &.expand {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      &.fix-left {
+        z-index: 2;
+      }
+      &.fix-right {
+        z-index: 2;
+      }
+    }
+    td.right.sortable {
+      padding-right: 22px;
+    }
+    td.right.tooltip {
+      padding-right: 24px;
+    }
+    td.right.tooltip.sortable {
+      padding-right: 38px;
+    }
+  }
+  @include e(child-row) {
+    td {
+      background-color: getCssVar('table-child-td-bg-color') !important;
+    }
+    &:hover {
+      td {
+        background-color: getCssVar('table-child-td-hover-bg-color') !important;
+      }
+    }
+  }
+  @include e((header, body, summary)) {
+    @include scroll();
+  }
+  @include e(header) {
+    top: 0;
+    position: sticky;
+    overflow: hidden;
+    background: getCssVar('table-header-bg-color');
+    box-sizing: border-box;
+    z-index: 3;
+  }
+  @include e(summary) {
+    top: 0;
+    position: sticky;
+    overflow: hidden;
+    background: getCssVar('table-summary-bg-color');
+    box-sizing: border-box;
+    z-index: 3;
+  }
+  @include e(summary-cell) {
+    &:nth-of-type(1) {
+      position: relative;
+      .corner {
+        display: inline-flex;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        g {
+          @include when('sticky') {
+            fill: getCssVar('color-primary');
+          }
+        }
+      }
+    }
+  }
+  @include e(body) {
+    box-sizing: border-box;
+    overflow: auto hidden;
+    tr {
+      .#{$namespace}-table__hover-contain {
+        visibility: hidden;
+      }
+      &:hover {
+        .#{$namespace}-table__hover-contain {
+          visibility: visible;
+        }
+      }
+    }
+  }
+  @include e(scroll-bar) {
+    position: sticky;
+    bottom: 0px;
+    height: 8px;
+    border-radius: 5px;
+    z-index: 4;
+    background: #ccc;
+    &:hover {
+      background: #999;
+    }
+    .scroll-text {
+      position: absolute;
+      left: 50%;
+      white-space: nowrap;
+      top: 100%;
+      font-size: 14px;
+      color: #a2a2a2;
+      transform: translate(-50%, 0%);
+    }
+  }
+  @include e(bottom) {
+    position: sticky;
+    bottom: 0px;
+    background: getCssVar('table-bottom-bg-color');
+    z-index: 3;
+    box-shadow: getCssVar('table-fixed-box-shadow');
+  }
+  @include e(hover-contain) {
+    display: inline-flex;
+  }
+  @include e(expand-icon) {
+    display: inline-flex;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    &:hover {
+      path {
+        fill: getCssVar('color', 'primary');
+      }
+    }
+    @include when(expanded) {
+      transform: rotate(90deg);
+    }
+  }
+  @include e(loading-icon) {
+    @include when(loading) {
+      display: inline-flex;
+      animation: rotating 2s infinite linear;
+      path {
+        fill: getCssVar('color', 'primary');
+      }
+    }
+  }
+  @include e(sort) {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 14px;
+    height: 12px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  @include e(sort-arrow) {
+    @include m((up, down)) {
+      width: 10px;
+      box-sizing: border-box;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      @include when(sorted) {
+        border-top-color: getCssVar('color-primary');
+        border-bottom-color: getCssVar('color-primary');
+      }
+    }
+    @include m(up) {
+      border-bottom: 5px solid #999;
+    }
+    @include m(down) {
+      border-top: 5px solid #999;
+    }
+
+    &.current {
+      border-top-color: blue;
+      border-bottom-color: blue;
+    }
+  }
+}
