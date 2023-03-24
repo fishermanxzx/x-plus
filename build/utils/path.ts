@@ -11,3 +11,7 @@ export const localeRoot = resolve(pkgRoot, 'locale')
 export const buildOutput = resolve(projRoot, 'dist')
 export const xpOutput = resolve(buildOutput, 'x-plus')
 export const xpPackage = resolve(xpRoot, 'package.json')
+// Docs
+export const docsDirName = 'docs'
+export const docRoot = resolve(projRoot, docsDirName)
+export const vpRoot = resolve(docRoot, '.vitepress')

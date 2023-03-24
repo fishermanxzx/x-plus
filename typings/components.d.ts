@@ -5,5 +5,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     XButton: typeof import('../packages/x-plus')['XButton']
     XConfigProvider: typeof import('../packages/x-plus')['XConfigProvider']
+    XTable: typeof import('../packages/x-plus')['XTable']
+    XTooltip: typeof import('../packages/x-plus')['XTooltip']
   }
 }

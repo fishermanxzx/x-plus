@@ -2,13 +2,13 @@
   <XTable
     :data="tableData"
     :columns="tableColumns"
+    :sticky-top="63"
   />
 </template>
 <script lang="ts">
 import { ref } from 'vue'
-import type { Columns } from '@x-plus/x-plus'
+import type { Columns } from '@yxkj/x-plus'
 export default {
-  props: {},
   setup() {
     const tableData = ref([
       {
@@ -33,23 +33,23 @@ export default {
     const tableColumns: Columns = [
       {
         prop: 'date',
-        width: 400,
+        width: 100,
         title: '日期',
         fixed:'left'
       },
       {
         prop: 'name',
-        width: 600,
+        width: 250,
         title: '名字',
       },
       {
         prop: 'time',
-        width: 800,
-        title: '名字',
+        width: 250,
+        title: '时间',
       },
       {
         prop: 'address',
-        width: 400,
+        width: 200,
         title: '地址',
         fixed:'right'
       }

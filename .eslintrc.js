@@ -35,6 +35,7 @@ module.exports = {
     // vue
     'vue/prefer-import-from-vue': 'off',
     'vue/require-default-prop': 'off',
-    'vue/no-v-html': 'off'
+    'vue/no-v-html': 'off',
+    'vue/multi-word-component-names': 'off'
   }
 }

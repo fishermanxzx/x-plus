@@ -21,6 +21,7 @@ const transformTableColumns = (props: TableProps) => {
     }
     addColumnClassName(expandColumn, expandColumn.align ?? 'left')
     addColumnClassName(expandColumn, 'fix-left')
+    addColumnClassName(expandColumn, 'no-padding')
     leftColumns.push(expandColumn)
   }
   columns.forEach(column => {

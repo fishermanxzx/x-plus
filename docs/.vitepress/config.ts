@@ -1,4 +1,6 @@
-export default {
+import type { UserConfig } from 'vitepress'
+import { mdPlugin } from './config/plugins'
+const config: UserConfig = {
   title: 'X-Plus',
   description: 'X Plus',
   themeConfig: {
@@ -7,7 +9,7 @@ export default {
     docsDir: 'docs',
     editLinks: true,
     editLinkText: '编辑此网站',
-    repo: 'https://gitee.com/login',
+    repo: 'https://e.gitee.com/useatech/repos/useatech/x-plus',
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2023-present X Plus'
@@ -31,9 +33,16 @@ export default {
       '/components/': [
         {
           text: '基础组件',
-          items: [{ text: 'Button', link: '/components/button' }]
+          items: [
+            { text: 'Button', link: '/components/button' },
+            { text: 'Table', link: '/components/table' }
+          ]
         }
       ]
     }
+  },
+  markdown: {
+    config: md => mdPlugin(md)
   }
 }
+export default config

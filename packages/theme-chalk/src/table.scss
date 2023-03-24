@@ -83,6 +83,8 @@
   @include e(container) {
     box-sizing: border-box;
     table {
+      margin: 0;
+      overflow: visible;
       border-collapse: separate;
       border-spacing: 0;
       table-layout: fixed;
@@ -90,66 +92,59 @@
       width: 100%;
     }
     tr {
+      th,
+      td {
+        border-bottom: 1px solid getCssVar('table-border-color');
+        padding: 12px 8px;
+        overflow-wrap: break-word;
+        vertical-align: middle;
+        overflow: hidden;
+        font-size: 12px;
+        &.left {
+          text-align: left;
+        }
+        &.center {
+          text-align: center;
+        }
+        &.right {
+          text-align: right;
+        }
+        &.no-padding {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        &.fix-left {
+          z-index: 2;
+        }
+        &.fix-right {
+          z-index: 2;
+        }
+      }
       th {
         background-color: getCssVar('table-th-bg-color');
+        color: getCssVar('table-header-text-color');
+        &.sortable {
+          cursor: pointer;
+        }
       }
       td {
         background-color: getCssVar('table-td-bg-color');
+        color: getCssVar('table-text-color');
+        &.right.sortable {
+          padding-right: 22px;
+        }
+        &.right.tooltip {
+          padding-right: 24px;
+        }
+        &.right.tooltip.sortable {
+          padding-right: 38px;
+        }
       }
       &:hover {
         td {
           background-color: getCssVar('table-td-hover-bg-color');
         }
       }
-    }
-    th {
-      border-bottom: 1px solid getCssVar('table-border-color');
-      color: getCssVar('table-header-text-color');
-
-      &.sortable {
-        cursor: pointer;
-      }
-    }
-
-    td {
-      border-bottom: 1px solid getCssVar('table-border-color');
-      color: getCssVar('table-text-color');
-    }
-    th,
-    td {
-      padding: 12px 8px;
-      overflow-wrap: break-word;
-      vertical-align: middle;
-      overflow: hidden;
-      font-size: 12px;
-      &.left {
-        text-align: left;
-      }
-      &.center {
-        text-align: center;
-      }
-      &.right {
-        text-align: right;
-      }
-      &.expand {
-        padding-left: 0px;
-        padding-right: 0px;
-      }
-      &.fix-left {
-        z-index: 2;
-      }
-      &.fix-right {
-        z-index: 2;
-      }
-    }
-    td.right.sortable {
-      padding-right: 22px;
-    }
-    td.right.tooltip {
-      padding-right: 24px;
-    }
-    td.right.tooltip.sortable {
-      padding-right: 38px;
     }
   }
   @include e(child-row) {
@@ -289,11 +284,6 @@
     }
     @include m(down) {
       border-top: 5px solid #999;
-    }
-
-    &.current {
-      border-top-color: blue;
-      border-bottom-color: blue;
     }
   }
 }

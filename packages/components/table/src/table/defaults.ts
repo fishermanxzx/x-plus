@@ -32,9 +32,9 @@ type CurrentSort = Sort
 type RowData = Record<string, any>
 type TreeProps =
   | {
-      hasChildren: string
-      children: string
-      expand: string
+      hasChildren?: string
+      children?: string
+      expand?: string
     }
   | undefined
 type DefaultSort = Sort

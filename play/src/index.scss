@@ -1,19 +1,19 @@
 @use 'sass:meta';
 @use 'sass:map';
-@use '@x-plus/theme-chalk/src/mixins/config.scss' with (
-    $namespace: 's'
-);
-@use '@x-plus/theme-chalk/src/common/var.scss' with (
-    $colors: (
-        'primary': (
-            'base': #fe5705,
-        ),
-    )
-);
+// @use '@x-plus/theme-chalk/src/mixins/config.scss' with (
+//     $namespace: 's'
+// );
+// @use '@x-plus/theme-chalk/src/common/var.scss' with (
+//     $colors: (
+//         'primary': (
+//             'base': #fe5705,
+//         ),
+//     )
+// );
 @use '@x-plus/theme-chalk/src/index.scss';
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 // @debug meta.inspect(map.get(index.$colors, 'primary','base'));
 // @use "./index.scss" with ($colors: ('primary': ('base': red,
