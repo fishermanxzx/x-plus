@@ -9,7 +9,8 @@ module.exports = {
     'plugin:vue/vue3-essential', //https://eslint.vuejs.org/
     // "plugin:vue/vue3-strongly-recommended",
     'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
   ],
   overrides: [
     {
@@ -26,7 +27,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['vue', '@typescript-eslint'],
+  plugins: ['vue', '@typescript-eslint', 'prettier'],
   rules: {
     // typescript
     '@typescript-eslint/no-extra-semi': 'off',
@@ -36,6 +37,8 @@ module.exports = {
     'vue/prefer-import-from-vue': 'off',
     'vue/require-default-prop': 'off',
     'vue/no-v-html': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    // prettier
+    'prettier/prettier': 'error'
   }
 }

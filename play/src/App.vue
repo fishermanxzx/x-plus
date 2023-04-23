@@ -1,8 +1,5 @@
 <template>
-  <XTable
-    :data="tableData"
-    :columns="tableColumns"
-  />
+  <XTable :data="tableData" :columns="tableColumns" v-loading="true" />
 </template>
 <script lang="ts">
 import { ref } from 'vue'
@@ -35,23 +32,23 @@ export default {
         prop: 'date',
         width: 400,
         title: '日期',
-        fixed:'left'
+        fixed: 'left'
       },
       {
         prop: 'name',
         width: 600,
-        title: '名字',
+        title: '名字'
       },
       {
         prop: 'time',
         width: 800,
-        title: '名字',
+        title: '名字'
       },
       {
         prop: 'address',
         width: 400,
         title: '地址',
-        fixed:'right'
+        fixed: 'right'
       }
     ]
 

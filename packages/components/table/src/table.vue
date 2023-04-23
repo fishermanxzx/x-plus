@@ -1,17 +1,10 @@
 <template>
-  <div
-    ref="xTable"
-    v-loading="loading"
-    :class="ns.b()"
-  >
-    <div
-      ref="anchor"
-      :class="ns.e('anchor')"
-    />
+  <div ref="xTable" :class="ns.b()">
+    <div ref="anchor" :class="ns.e('anchor')" />
     <div :class="ns.e('container')">
       <div
         ref="headerWrapper"
-        :class="[ns.e('header'),scrollClassName]"
+        :class="[ns.e('header'), scrollClassName]"
         :style="{ top: stickyTop + 'px' }"
       >
         <table ref="headerTable">
@@ -41,10 +34,10 @@
       <div
         v-if="showSummary"
         ref="summaryWrapper"
-        :class="[scrollClassName,ns.e('summary')]"
+        :class="[scrollClassName, ns.e('summary')]"
         :style="{
           top: headerWrapperHeight + stickyTop + 'px',
-          position: summarySticky ? 'sticky' : 'initial',
+          position: summarySticky ? 'sticky' : 'initial'
         }"
       >
         <table ref="summaryTable">
@@ -73,7 +66,7 @@
       </div>
       <div
         ref="bodyWrapper"
-        :class="[scrollClassName,ns.e('body')]"
+        :class="[scrollClassName, ns.e('body')]"
         @scroll.passive="bodyScrollEvent"
       >
         <table ref="bodyTable">
@@ -83,19 +76,10 @@
             :columns="tableColumns"
             @reload="handleReload"
           />
-          <tbody
-            v-else-if="data.length != 0"
-            :class="ns.e('tbody')"
-          >
-            <template
-              v-for="(row, rowIndex) in data"
-              :key="rowIndex"
-            >
+          <tbody v-else-if="data.length != 0" :class="ns.e('tbody')">
+            <template v-for="(row, rowIndex) in data" :key="rowIndex">
               <tr>
-                <template
-                  v-for="column in tableColumns"
-                  :key="column.prop"
-                >
+                <template v-for="column in tableColumns" :key="column.prop">
                   <ExpandCell
                     v-if="column.prop == '__x_expand'"
                     :children-prop="childrenProp"
@@ -105,11 +89,7 @@
                     :row="row"
                     :load-fn="loadChild"
                   />
-                  <BodyCell
-                    v-else
-                    :column="column"
-                    :row="row"
-                  >
+                  <BodyCell v-else :column="column" :row="row">
                     <slot
                       :name="column.prop"
                       :row="row"
@@ -123,23 +103,13 @@
                   v-for="(childRow, childRowIndex) in row[childrenProp]"
                   :key="rowIndex + '_' + childRowIndex"
                 >
-                  <tr
-                    v-show="row[expandProp]"
-                    :class="ns.e('child-row')"
-                  >
-                    <template
-                      v-for="column in tableColumns"
-                      :key="column.prop"
-                    >
+                  <tr v-show="row[expandProp]" :class="ns.e('child-row')">
+                    <template v-for="column in tableColumns" :key="column.prop">
                       <td
                         v-if="column.prop == '__x_expand'"
-                        :class="[ns.m('cell'),column.className]"
+                        :class="[ns.m('cell'), column.className]"
                       />
-                      <BodyCell
-                        v-else
-                        :column="column"
-                        :row="childRow"
-                      >
+                      <BodyCell v-else :column="column" :row="childRow">
                         <slot
                           :name="column.prop"
                           :row="childRow"
@@ -152,40 +122,44 @@
               </template>
             </template>
           </tbody>
-          <EmptyBody
-            v-else
-            :columns="tableColumns"
-            :empty-text="emptyText"
-          />
+          <EmptyBody v-else :columns="tableColumns" :empty-text="emptyText" />
         </table>
       </div>
-      <div
-        ref="scrollBar"
-        :class="ns.e('scroll-bar')"
-      >
+      <div ref="scrollBar" :class="ns.e('scroll-bar')">
         <!-- <span class="scroll-text">鼠标按住列表可左右拖动</span> -->
       </div>
-      <div
-        v-if="$slots.bottom"
-        :class="ns.e('bottom')"
-      >
+      <div v-if="$slots.bottom" :class="ns.e('bottom')">
         <slot name="bottom" />
       </div>
     </div>
   </div>
 </template>
 <script lang="ts">
-import {  tableProps } from './table/defaults';
-import type {SortType,CurrentSort,TableColumn,RowData,LoadResult} from './table/defaults';
-import {defineComponent,nextTick,onBeforeUnmount,onMounted,reactive,ref,watch} from 'vue';
-import Cols from "./cols/cols.vue"
-import {EmptyBody,ReloadBody} from "./body"
-import { HeaderCell,BodyCell,SummaryCell,ExpandCell } from './cell';
-import {transformTableColumns} from "./column"
-import { Listener } from '@x-plus/utils';
-import { transformTreeProps } from './table/helps';
-import useLayout from "./layout"
-import { useNamespace } from '@x-plus/hooks';
+import { tableProps } from './table/defaults'
+import type {
+  SortType,
+  CurrentSort,
+  TableColumn,
+  RowData,
+  LoadResult
+} from './table/defaults'
+import {
+  defineComponent,
+  nextTick,
+  onBeforeUnmount,
+  onMounted,
+  reactive,
+  ref,
+  watch
+} from 'vue'
+import Cols from './cols/cols.vue'
+import { EmptyBody, ReloadBody } from './body'
+import { HeaderCell, BodyCell, SummaryCell, ExpandCell } from './cell'
+import { transformTableColumns } from './column'
+import { Listener } from '@x-plus/utils'
+import { transformTreeProps } from './table/helps'
+import useLayout from './layout'
+import { useNamespace } from '@x-plus/hooks'
 export default defineComponent({
   name: 'XTable',
   components: {
@@ -195,22 +169,22 @@ export default defineComponent({
     HeaderCell,
     BodyCell,
     SummaryCell,
-    ExpandCell,
+    ExpandCell
   },
-  props:tableProps,
-  emits: ["sortChange", "reload", "load"],
+  props: tableProps,
+  emits: ['sortChange', 'reload', 'load'],
   setup(props, { emit }) {
-    const tableColumns = ref(transformTableColumns(props));
+    const tableColumns = ref(transformTableColumns(props))
     const ns = useNamespace('table')
     watch(
       () => props.columns,
       () => {
-        tableColumns.value = transformTableColumns(props);
+        tableColumns.value = transformTableColumns(props)
       },
       {
-        deep: true,
+        deep: true
       }
-    );
+    )
     const {
       xTable,
       headerTable,
@@ -228,72 +202,72 @@ export default defineComponent({
       doLayout,
       headerWrapperHeight,
       summarySticky,
-      observerWidth,
-    } = useLayout(tableColumns);
-    const currentSort = reactive<CurrentSort>({ ...props.defaultSort });
-    const sort = (prop: string, order: SortType)=>{
+      observerWidth
+    } = useLayout(tableColumns)
+    const currentSort = reactive<CurrentSort>({ ...props.defaultSort })
+    const sort = (prop: string, order: SortType) => {
       currentSort.prop = prop
       currentSort.sort = order
     }
-    let bodyWrapperMousedownListener: Listener|null = null;
-    let scrollBarMousedownListener: Listener|null = null;
-    let containerWidthListener:Listener|null = null
+    let bodyWrapperMousedownListener: Listener | null = null
+    let scrollBarMousedownListener: Listener | null = null
+    let containerWidthListener: Listener | null = null
     onMounted(async () => {
-      await nextTick();
-      requestAnimationFrame(doLayout);
+      await nextTick()
+      requestAnimationFrame(doLayout)
       containerWidthListener = observerWidth()
-      bodyWrapperMousedownListener = addBodyWrapperEvent();
-      scrollBarMousedownListener = addScrollBarEvent();
-    });
+      bodyWrapperMousedownListener = addBodyWrapperEvent()
+      scrollBarMousedownListener = addScrollBarEvent()
+    })
     onBeforeUnmount(() => {
       containerWidthListener?.remove()
-      bodyWrapperMousedownListener?.remove();
-      scrollBarMousedownListener?.remove();
-    });
+      bodyWrapperMousedownListener?.remove()
+      scrollBarMousedownListener?.remove()
+    })
     const changeSort = (column: TableColumn) => {
-      if (!column.sort) return;
+      if (!column.sort) return
       if (currentSort.prop !== column.prop) {
-        currentSort.prop = column.prop;
-        currentSort.sort = column.sort;
-        emit("sortChange", { ...currentSort });
-        return;
+        currentSort.prop = column.prop
+        currentSort.sort = column.sort
+        emit('sortChange', { ...currentSort })
+        return
       }
-      currentSort.sort = currentSort.sort == "asc" ? "desc" : "asc";
-      emit("sortChange", { ...currentSort });
-    };
+      currentSort.sort = currentSort.sort == 'asc' ? 'desc' : 'asc'
+      emit('sortChange', { ...currentSort })
+    }
     const handleReload = () => {
-      emit("reload");
-    };
+      emit('reload')
+    }
     const toView = (
       option: {
-        block?: "center" | "end" | "nearest" | "start";
-        inline?: "center" | "end" | "nearest" | "start";
-        behavior?: "auto" | "smooth";
-        offset?:{
-          top: number;
+        block?: 'center' | 'end' | 'nearest' | 'start'
+        inline?: 'center' | 'end' | 'nearest' | 'start'
+        behavior?: 'auto' | 'smooth'
+        offset?: {
+          top: number
         }
       } = {
-        block: "start",
-        behavior: "auto",
+        block: 'start',
+        behavior: 'auto'
       }
     ) => {
-      if (!anchor.value) return;
+      if (!anchor.value) return
       if (!option.offset) {
-        anchor.value.scrollIntoView(option);
-        return;
+        anchor.value.scrollIntoView(option)
+        return
       }
-      anchor.value.style.top = -option.offset.top + "px";
-      anchor.value.scrollIntoView(option);
-      anchor.value.style.top = 0 + "px";
-    };
+      anchor.value.style.top = -option.offset.top + 'px'
+      anchor.value.scrollIntoView(option)
+      anchor.value.style.top = 0 + 'px'
+    }
     const { hasChildrenProp, childrenProp, expandProp } = transformTreeProps(
       props.treeProps
-    );
+    )
     const loadChild = (rowData: RowData): Promise<LoadResult> => {
-      return new Promise((resolve) => {
-        emit("load", rowData, resolve);
-      });
-    };
+      return new Promise(resolve => {
+        emit('load', rowData, resolve)
+      })
+    }
     return {
       xTable,
       headerWrapper,
@@ -320,8 +294,7 @@ export default defineComponent({
       doLayout,
       sort,
       ns
-    };
-  },
+    }
+  }
 })
 </script>
-

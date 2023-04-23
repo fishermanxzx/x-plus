@@ -37,10 +37,15 @@ const config: UserConfig = {
             { text: 'Button', link: '/components/button' },
             { text: 'Table', link: '/components/table' }
           ]
+        },
+        {
+          text: '指令',
+          items: [{ text: 'Loading', link: '/components/loading' }]
         }
       ]
     }
   },
+  appearance: false,
   markdown: {
     config: md => mdPlugin(md)
   }

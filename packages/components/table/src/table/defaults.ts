@@ -55,10 +55,6 @@ const tableProps = {
       sort: ''
     })
   },
-  loading: {
-    type: Boolean,
-    default: false
-  },
   reload: {
     type: Boolean,
     default: false
@@ -73,10 +69,6 @@ const tableProps = {
   },
   treeProps: {
     type: Object as PropType<TreeProps>
-  },
-  lazy: {
-    type: Boolean,
-    default: false
   },
   emptyText: String
 }

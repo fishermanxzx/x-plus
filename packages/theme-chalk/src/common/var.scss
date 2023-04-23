@@ -446,3 +446,14 @@ $table-cell-padding: map.merge(
   ),
   $table-cell-padding
 );
+
+// Loading
+// css3 var in packages/theme-chalk/src/loading.scss
+$loading: () !default;
+$loading: map.merge(
+  (
+    'spinner-size': 42px,
+    'font-size': 14px
+  ),
+  $loading
+);

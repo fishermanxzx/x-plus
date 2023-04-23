@@ -1,14 +1,16 @@
 <template>
   <th
     :style="{ ...column?.positionInfo }"
-    :class="[ns.e('cell'),column?.className]"
+    :class="[ns.e('cell'), column?.className]"
     @click="sort(column!)"
   >
-    <slot><span style="vertical-align: middle;font-weight:500;font-size:13px;">{{ column?.title }}</span></slot>
-    <XTooltip
-      v-if="column?.tooltip"
-      :content="column.tooltip"
+    <slot
+      ><span
+        style="vertical-align: middle; font-weight: 500; font-size: 13px"
+        >{{ column?.title }}</span
+      ></slot
     >
+    <XTooltip v-if="column?.tooltip" :content="column.tooltip">
       <span style="vertical-align: middle; display: inline-flex">
         <svg
           t="1663573600547"
@@ -36,37 +38,36 @@
             fill="#999999"
           />
         </svg>
-      </span>
-    </XTooltip><Sort
+      </span> </XTooltip
+    ><Sort
       v-if="column?.sort"
       :sort="column.prop == currentSort?.prop ? currentSort.sort : ''"
     />
   </th>
 </template>
 <script lang="ts">
-import { useNamespace } from "@x-plus/hooks";
-import { TableColumn, getProps } from "../table/defaults";
-import XTooltip from "@x-plus/components/tooltip";
-import Sort from "./sort.vue";
+import { useNamespace } from '@x-plus/hooks'
+import { TableColumn, getProps } from '../table/defaults'
+import XTooltip from '@x-plus/components/tooltip'
+import Sort from './sort.vue'
 export default {
   components: {
     XTooltip,
-    Sort,
+    Sort
   },
-  props: getProps(['currentSort','column']),
-  emits: ["sort"],
+  props: getProps(['currentSort', 'column']),
+  emits: ['sort'],
   setup(props, { emit }) {
     const ns = useNamespace('table')
     const sort = (column: TableColumn) => {
-      if (!column.sort) return;
-      emit("sort", column);
-    };
+      if (!column.sort) return
+      emit('sort', column)
+    }
     return {
       sort,
       ns
-    };
-  },
-};
+    }
+  }
+}
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

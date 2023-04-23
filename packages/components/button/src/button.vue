@@ -5,7 +5,7 @@
       ns.m(size),
       ns.m(type),
       ns.is('disabled', disabled),
-      ns.is('plain', plain),
+      ns.is('plain', plain)
     ]"
     @click="handleClick"
   >
@@ -37,4 +37,3 @@ export default defineComponent({
   }
 })
 </script>
-

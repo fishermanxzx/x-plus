@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@x-plus/x-plus': `${resolve(__dirname, '../packages/x-plus')}`
+      '@x-plus/x-plus': `${resolve(__dirname, '../packages/x-plus/index.ts')}`
     }
   }
 })

@@ -1,3 +1,4 @@
 import { makeInstaller } from './make-installer'
 import Components from './component'
-export default makeInstaller([...Components])
+import Plugins from './plugin'
+export default makeInstaller([...Components, ...Plugins])

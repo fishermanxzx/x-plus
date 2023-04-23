@@ -3,7 +3,6 @@
     :data="tableData"
     :columns="tableColumns"
     :tree-props="treeProps"
-    :lazy="true"
     :sticky-top="64"
     @load="load"
   />

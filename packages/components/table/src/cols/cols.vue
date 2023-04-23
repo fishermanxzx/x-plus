@@ -1,24 +1,20 @@
 <template>
   <colgroup>
-    <template
-      v-for="column in columns"
-      :key="column.prop"
-    >
-      <col :width="column.width">
+    <template v-for="column in columns" :key="column.prop">
+      <col :width="column.width" />
     </template>
   </colgroup>
 </template>
 <script lang="ts">
-import { tableProps } from "../table/defaults";
-import { defineComponent } from "vue";
+import { tableProps } from '../table/defaults'
+import { defineComponent } from 'vue'
 export default defineComponent({
-  name:"XCols",
+  name: 'XCols',
   props: {
-    columns: tableProps.columns,
+    columns: tableProps.columns
   },
   setup() {
-    return {
-    };
-  },
-});
+    return {}
+  }
+})
 </script>

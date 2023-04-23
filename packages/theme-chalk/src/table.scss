@@ -1,6 +1,16 @@
+@use 'sass:map';
 @use 'mixins/mixins' as *;
 @use 'mixins/var' as *;
 @use 'common/var' as *;
+
+@keyframes #{$namespace}-rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @mixin scroll {
   & {
     // 避免拖动时选中
@@ -62,14 +72,6 @@
 }
 
 @include b(table) {
-  @keyframes rotating {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -99,7 +101,7 @@
         overflow-wrap: break-word;
         vertical-align: middle;
         overflow: hidden;
-        font-size: 12px;
+        font-size: map.get($table-font-size, 'small');
         &.left {
           text-align: left;
         }
@@ -222,7 +224,7 @@
       left: 50%;
       white-space: nowrap;
       top: 100%;
-      font-size: 14px;
+      font-size: map.get($table-font-size, 'default');
       color: #a2a2a2;
       transform: translate(-50%, 0%);
     }
@@ -233,6 +235,7 @@
     background: getCssVar('table-bottom-bg-color');
     z-index: 3;
     box-shadow: getCssVar('table-fixed-box-shadow');
+    font-size: map.get($table-font-size, 'default');
   }
   @include e(hover-contain) {
     display: inline-flex;
@@ -251,9 +254,9 @@
     }
   }
   @include e(loading-icon) {
+    display: inline-flex;
     @include when(loading) {
-      display: inline-flex;
-      animation: rotating 2s infinite linear;
+      animation: #{$namespace}-rotating 2s infinite linear;
       path {
         fill: getCssVar('color', 'primary');
       }

@@ -1,15 +1,14 @@
 <template>
   <XTable
+    v-loading="loading"
     :data="tableData"
     :columns="tableColumns"
-    :default-sort="defaultSort"
-    :sticky-top="64"
-    @sort-change="handleSort"
+    :sticky-top="63"
   />
 </template>
 <script lang="ts">
 import { ref } from 'vue'
-import type { Columns, Sort, SortType } from '@yxkj/x-plus'
+import type { Columns } from '@yxkj/x-plus'
 export default {
   setup() {
     const tableData = ref([
@@ -33,33 +32,29 @@ export default {
       {
         prop: 'date',
         width: 200,
-        title: '日期'
+        title: '日期',
+        align: 'center'
       },
       {
         prop: 'name',
         width: 200,
-        title: '名字'
+        title: '名字',
+        fit: false
       },
       {
         prop: 'address',
         width: 200,
-        title: '地址',
-        sort: 'asc'
+        title: '地址'
       }
     ]
-    const defaultSort: Sort = {
-      prop: 'date',
-      sort: 'asc'
-    }
-    const handleSort = (sort: { prop: string; sort: SortType }) => {
-      //请求接口
-      console.log(sort)
-    }
+    const loading = ref(true)
+    setTimeout(() => {
+      loading.value = false
+    }, 2000)
     return {
       tableData,
       tableColumns,
-      defaultSort,
-      handleSort
+      loading
     }
   }
 }

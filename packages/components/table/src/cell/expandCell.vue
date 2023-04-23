@@ -1,33 +1,36 @@
 <template>
   <td
     :style="{ ...column?.positionInfo }"
-    :class="[ns.e('cell'),column?.className]"
+    :class="[ns.e('cell'), column?.className]"
   >
-    <template v-if="row?.[hasChildrenProp||'']">
-      <i v-if="noData" />
-      <i
+    <template v-if="row?.[hasChildrenProp || '']">
+      <div v-if="noData" />
+      <div
         v-else-if="!isloading"
-        :class="[ns.e('expand-icon'),ns.is('expanded',expandProp&&row[expandProp])]"
-        @click="handleExpand(row||{})"
-      ><svg
-        t="1663656502019"
-        class="icon"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        p-id="7068"
-        width="14"
-        height="14"
+        :class="[
+          ns.e('expand-icon'),
+          ns.is('expanded', expandProp && row[expandProp])
+        ]"
+        @click="handleExpand(row || {})"
       >
-        <path
-          d="M711.6 488.624L355.2 152.976a29.36 29.36 0 0 0-42.352 0 31.408 31.408 0 0 0 0 43.552L647.76 512 312.848 827.36a31.408 31.408 0 0 0 0 43.552 29.36 29.36 0 0 0 42.352 0l356.4-335.648a36.32 36.32 0 0 0 0-46.64z"
-          p-id="7069"
-          fill="#333333"
-        /></svg></i>
-      <i
-        v-else
-        :class="[ns.e('loading-icon'),ns.is('loading')]"
-      >
+        <svg
+          t="1663656502019"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="7068"
+          width="14"
+          height="14"
+        >
+          <path
+            d="M711.6 488.624L355.2 152.976a29.36 29.36 0 0 0-42.352 0 31.408 31.408 0 0 0 0 43.552L647.76 512 312.848 827.36a31.408 31.408 0 0 0 0 43.552 29.36 29.36 0 0 0 42.352 0l356.4-335.648a36.32 36.32 0 0 0 0-46.64z"
+            p-id="7069"
+            fill="#333333"
+          />
+        </svg>
+      </div>
+      <div v-else :class="[ns.e('loading-icon'), ns.is('loading')]">
         <svg
           t="1663663774594"
           class="icon"
@@ -44,49 +47,55 @@
             fill="#333333"
           />
         </svg>
-      </i>
+      </div>
     </template>
   </td>
 </template>
 <script lang="ts">
-import {  defineComponent, ref } from "vue";
-import {getProps} from "../table/defaults";
-import type {RowData} from "../table/defaults";
-import { useNamespace } from "@x-plus/hooks";
+import { defineComponent, ref } from 'vue'
+import { getProps } from '../table/defaults'
+import type { RowData } from '../table/defaults'
+import { useNamespace } from '@x-plus/hooks'
 export default defineComponent({
-  props: getProps(['column','row','hasChildrenProp','childrenProp','expandProp','loadFn']),
+  props: getProps([
+    'column',
+    'row',
+    'hasChildrenProp',
+    'childrenProp',
+    'expandProp',
+    'loadFn'
+  ]),
   setup(props) {
-    const isloading = ref(false);
-    const noData = ref(false);
+    const isloading = ref(false)
+    const noData = ref(false)
     const ns = useNamespace('table')
     const handleExpand = async (rowData: RowData) => {
       if (
         rowData[props.childrenProp!] &&
         rowData[props.childrenProp!].length !== 0
       ) {
-        rowData[props.expandProp!] = !rowData[props.expandProp!];
-        return;
+        rowData[props.expandProp!] = !rowData[props.expandProp!]
+        return
       }
-      isloading.value = true;
-      const result = await props.loadFn(rowData);
-      isloading.value = false;
+      isloading.value = true
+      const result = await props.loadFn(rowData)
+      isloading.value = false
       if (result === false) {
-        rowData[props.expandProp!] = false;
-        return;
+        rowData[props.expandProp!] = false
+        return
       }
       if (result.length == 0) {
-        noData.value = true;
+        noData.value = true
       }
-      rowData[props.childrenProp!] = result;
-      rowData[props.expandProp!] = true;
-    };
+      rowData[props.childrenProp!] = result
+      rowData[props.expandProp!] = true
+    }
     return {
       handleExpand,
       isloading,
       noData,
       ns
-    };
-  },
-});
+    }
+  }
+})
 </script>
-

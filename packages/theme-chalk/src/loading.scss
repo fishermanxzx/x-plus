@@ -1,0 +1,67 @@
+@use 'sass:map';
+@use 'mixins/mixins' as *;
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+
+@keyframes #{$namespace}-loading-rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes #{$namespace}-loading-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40px;
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120px;
+  }
+}
+@include b(loading) {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: getCssVar('mask-color');
+  @include e('spinner') {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: center;
+  }
+  @include e('spinner-circle') {
+    display: inline;
+    height: map.get($loading, 'spinner-size');
+    width: map.get($loading, 'spinner-size');
+    animation: #{$namespace}-loading-rotate 2s linear infinite;
+  }
+  @include e('spinner-path') {
+    animation: #{$namespace}-loading-dash 1.5s ease-in-out infinite;
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: getCssVar('color-primary');
+    stroke-linecap: round;
+  }
+  @include e('text') {
+    color: getCssVar('color-primary');
+    font-size: map.get($loading, 'font-size');
+  }
+  @include e('parent') {
+    position: relative !important;
+  }
+}

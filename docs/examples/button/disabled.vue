@@ -1,80 +1,18 @@
 <template>
   <div>
-    <x-button disabled>
-      Default
-    </x-button>
-    <x-button
-      type="primary"
-      disabled
-    >
-      Primary
-    </x-button>
-    <x-button
-      type="success"
-      disabled
-    >
-      Success
-    </x-button>
-    <x-button
-      type="info"
-      disabled
-    >
-      Info
-    </x-button>
-    <x-button
-      type="warning"
-      disabled
-    >
-      Warning
-    </x-button>
-    <x-button
-      type="danger"
-      disabled
-    >
-      Danger
-    </x-button>
+    <x-button disabled> Default </x-button>
+    <x-button type="primary" disabled> Primary </x-button>
+    <x-button type="success" disabled> Success </x-button>
+    <x-button type="info" disabled> Info </x-button>
+    <x-button type="warning" disabled> Warning </x-button>
+    <x-button type="danger" disabled> Danger </x-button>
   </div>
-  <div style="margin-top:16px;">
-    <x-button
-      plain
-      disabled
-    >
-      Default
-    </x-button>
-    <x-button
-      type="primary"
-      plain
-      disabled
-    >
-      Primary
-    </x-button>
-    <x-button
-      type="success"
-      plain
-      disabled
-    >
-      Success
-    </x-button>
-    <x-button
-      type="info"
-      plain
-      disabled
-    >
-      Info
-    </x-button>
-    <x-button
-      type="warning"
-      plain
-      disabled
-    >
-      Warning
-    </x-button>
-    <x-button
-      type="danger"
-      plain
-      disabled
-    >
-      Danger
-    </x-button>
+  <div style="margin-top: 16px">
+    <x-button plain disabled> Default </x-button>
+    <x-button type="primary" plain disabled> Primary </x-button>
+    <x-button type="success" plain disabled> Success </x-button>
+    <x-button type="info" plain disabled> Info </x-button>
+    <x-button type="warning" plain disabled> Warning </x-button>
+    <x-button type="danger" plain disabled> Danger </x-button>
   </div>
 </template>

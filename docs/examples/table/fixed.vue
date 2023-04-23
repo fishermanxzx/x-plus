@@ -1,9 +1,5 @@
 <template>
-  <XTable
-    :data="tableData"
-    :columns="tableColumns"
-    :sticky-top="63"
-  />
+  <XTable :data="tableData" :columns="tableColumns" :sticky-top="63" />
 </template>
 <script lang="ts">
 import { ref } from 'vue'
@@ -35,23 +31,23 @@ export default {
         prop: 'date',
         width: 100,
         title: '日期',
-        fixed:'left'
+        fixed: 'left'
       },
       {
         prop: 'name',
         width: 250,
-        title: '名字',
+        title: '名字'
       },
       {
         prop: 'time',
         width: 250,
-        title: '时间',
+        title: '时间'
       },
       {
         prop: 'address',
         width: 200,
         title: '地址',
-        fixed:'right'
+        fixed: 'right'
       }
     ]
 
