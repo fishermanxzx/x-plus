@@ -4,12 +4,11 @@
   </OnlyChild>
 </template>
 <script lang="ts">
-import OnlyChild from "./onlyChild";
+import OnlyChild from './onlyChild'
 export default {
-  name:'XTrigger',
+  name: 'XTrigger',
   components: {
-    OnlyChild,
+    OnlyChild
   }
-};
+}
 </script>
-
