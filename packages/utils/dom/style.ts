@@ -52,7 +52,7 @@ export const setStyle = (
   if (!element || !styleName) return
 
   if (isObject(styleName)) {
-    entriesOf(styleName).forEach(([prop, value]) =>
+    entriesOf(styleName as object).forEach(([prop, value]) =>
       setStyle(element, prop, value)
     )
   } else {
@@ -68,7 +68,7 @@ export const removeStyle = (
   if (!element || !style) return
 
   if (isObject(style)) {
-    keysOf(style).forEach(prop => removeStyle(element, prop))
+    keysOf(style as object).forEach(prop => removeStyle(element, prop))
   } else {
     setStyle(element, style, '')
   }

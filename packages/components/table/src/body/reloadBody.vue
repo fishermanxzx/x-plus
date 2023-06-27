@@ -66,22 +66,3 @@ export default defineComponent({
   }
 })
 </script>
-<style lang="scss" scoped>
-// @import "../../style/tr.scss";
-// @import "../../style/body.scss";
-// @import "../../style/common.scss";
-// tr {
-//   td {
-//     height: 80px;
-//     color: #333;
-//     text-align: center !important;
-//     svg {
-//       vertical-align: top;
-//       cursor: pointer;
-//       .path {
-//         fill: $main-color;
-//       }
-//     }
-//   }
-// }
-</style>

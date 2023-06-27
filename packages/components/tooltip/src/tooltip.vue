@@ -16,12 +16,12 @@
   </Trigger>
 </template>
 <script lang="ts">
-import { ref, nextTick } from 'vue'
+import { ref, nextTick, defineComponent } from 'vue'
 import Trigger from './trigger.vue'
 import { getPosition } from '@x-plus/utils'
 import { tooltipProps } from './tooltip'
 import { useNamespace } from '@x-plus/hooks'
-export default {
+export default defineComponent({
   name: 'XTooltip',
   components: {
     Trigger
@@ -89,5 +89,5 @@ export default {
       ns
     }
   }
-}
+})
 </script>

@@ -20,7 +20,9 @@ const setLoading = (el: LoadingParent, isLoading: boolean) => {
 }
 const createInstance = (el: LoadingParent) => {
   const LoadingApp = createApp(XLoading)
-  const loadingInstance = LoadingApp.mount(document.createElement('div'))
+  const loadingInstance = LoadingApp.mount(
+    document.createElement('div')
+  ) as InstanceType<typeof XLoading>
   el[INSTANCE_KEY] = {
     instance: loadingInstance,
     instanceApp: LoadingApp

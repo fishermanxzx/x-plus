@@ -16,8 +16,8 @@
 </template>
 <script lang="ts">
 import { useNamespace } from '@x-plus/hooks'
-import { ref } from 'vue'
-export default {
+import { ref, defineComponent } from 'vue'
+export default defineComponent({
   name: 'XLoading',
   setup() {
     const ns = useNamespace('loading')
@@ -35,5 +35,5 @@ export default {
       ns
     }
   }
-}
+})
 </script>
